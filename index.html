@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>JS Live Validation</title>
+  </head>
+  <body style="background: aliceblue;">
+    <div class="container">
+      <h1 class="text-center">JS Live Validation</h1>
+      <form name="myForm">
+        <input
+          class="form-control"
+          placeholder="Username"
+          type="text"
+          name="username"
+          required
+          oninput="validateUsername()"
+        />
+        <p id="usernameError"></p>
+        <input
+          class="form-control"
+          placeholder="Password"
+          type="password"
+          name="password1"
+          required
+        />
+        <p></p>
+        <input
+          class="form-control"
+          placeholder="Confirm Password"
+          type="password"
+          name="password2"
+          required
+          oninput="validatePassword(form)"
+        />
+
+        <p id="passwordError"></p>
+
+        <input
+          type="submit"
+          name="login"
+          class="btn btn-info"
+          value="Sign Up"
+          onclick="welcomeUser()"
+        />
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
